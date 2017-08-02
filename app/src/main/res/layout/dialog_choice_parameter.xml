@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dp"
+                android:background="@color/grey_ccc" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/goods_pic"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥99.00"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/iv_pic"
+            android:textColor="#27a366" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LENCIER兰叙 全棉春秋被双人加厚保暖被芯冬被单人学生宿舍空调被"
+
+            android:layout_below="@+id/tv_price"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="-5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/iv_close"
+            android:layout_toRightOf="@+id/iv_pic"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:src="@mipmap/goods_spec_close" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:overScrollMode="never" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_count"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_qpl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#333"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/ib_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/selector_add" />
+
+            <EditText
+                android:id="@+id/et_count"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_toLeftOf="@+id/ib_add"
+                android:background="@drawable/shape_et_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@drawable/selector_et"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/ib_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_toLeftOf="@+id/et_count"
+                android:background="@drawable/selector_reduce" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="立即购买"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>
